@@ -30,6 +30,16 @@ python scripts/collect_week.py --repo org/backend --week-start 2026-11-09 --outp
 
 Question answers receive 0-4 points. Final /100 is category-normalized: intent 30%, implementation 40%, code reasoning 30%, with missing categories renormalized rather than penalized. The final report states how many merged PRs were sampled and how many ongoing PRs were summarized.
 
+## Remember progress and catch up
+
+> Blame me on last week's changes and enable local learning memory. Remember demonstrated strengths and gaps for future study.
+
+Memory is optional and stays outside your repositories, by default in `${CODEX_HOME:-~/.codex}/blame-me-memory/<github-login>/learning.md`. You can choose another local location. It retains a compact profile of your stated goals and preferences, dated topic evidence, and assessment summaries. It does not store raw source patches or full answers. The agent reports whether saving succeeded; filesystem access is required for persistence across sessions.
+
+> Help me catch up on the gaps from my last examination. I have 15 minutes.
+
+Catch-up uses the saved gaps to explain a concept, give focused practice, and check understanding with a fresh question. Assisted practice and independent understanding are recorded separately, and later progress does not rewrite the original exam score. You can ask to show or correct the profile, forget a topic, disable memory, or delete it.
+
 ## Limitations
 
 A skill does **not** create its own Monday schedule; schedule a reminder or agent run separately. Repository scope and GitHub permissions determine coverage. GitHub commit attribution may miss agent or coauthor identities; author-owned PRs are still included but labeled appropriately. Collection and scoring are unit-tested offline; a live run against your repositories is not part of the installation package.

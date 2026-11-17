@@ -37,6 +37,10 @@ A concise paragraph explaining cross-PR changes, meaningful dependencies, risky 
 
 1-3 high-value concepts or files to revisit, ideally derived from wrong answers. No unsupported work commitments. If no eligible merged PRs, lead with the digest; say **Not graded: no eligible merged work**.
 
+## Learning follow-up
+
+Name one to three concrete practice targets and relevant demonstrated strengths. If memory is enabled, state the saved location and updated topics, or disclose that saving failed. Otherwise omit persistence claims. Offer a focused catch-up; keep its results separate from this examination score.
+
 ## Collection caveats
 
 State exact dates and timezone, included repositories, whether PR-authored bot commits were included, and any missing PR commit attribution, inaccessible patches, rate limits, or pagination caps. Label historical score trends as unavailable if there is no supplied prior saved history.

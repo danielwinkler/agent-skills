@@ -2,7 +2,9 @@
 
 ## Storage and identity
 
-Use memory when the user enables it or requests saving/resuming learning progress. State the selected location on first use. Default to `${CODEX_HOME:-~/.codex}/blame-me-memory/<github-login>/learning.md`, expanding the environment variable or home directory to an absolute path. Honor a user-selected location outside version-controlled repositories. On a shared account or when identity is uncertain, ask which profile to use before reading personal records. Without GitHub identity, let the user choose a stable profile name; use a single safe path component.
+Use memory when the user enables it or requests saving/resuming learning progress. State the selected location on first use. Default to `${CODEX_HOME:-~/.codex}/mirror-gate-memory/<github-login>/learning.md`, expanding the environment variable or home directory to an absolute path. Honor a user-selected location outside version-controlled repositories. On a shared account or when identity is uncertain, ask which profile to use before reading personal records. Without GitHub identity, let the user choose a stable profile name; use a single safe path component.
+
+For users upgrading from Blame Me, continue using an already established `blame-me-memory` profile location unless they request migration; renaming the skill does not move or discard learning history.
 
 Create the directory only when saving is authorized. Use owner-only directory/file permissions where supported (0700/0600). Read an existing file before editing, preserve unrelated topics and user corrections, and replace it atomically through a temporary file in the same directory. If it changed since reading, reread and reconcile rather than overwrite. Follow filesystem permissions; if storage is unavailable, continue in chat and explicitly say progress was not saved. Never silently choose another persistent location.
 

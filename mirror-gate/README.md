@@ -1,21 +1,21 @@
-# Blame Me (agent skill)
+# MirrorGate (agent skill)
 
 A short Monday engineering recall check based on last week's merged GitHub PRs, plus a separate recap of ongoing open PRs.
 
 ## Install
 
-Upload `skill.zip` as a custom agent skill in a Skills-compatible agent, or place the `blame-me/` directory in the agent's supported skills directory. The GitHub connector fallback works in ChatGPT when GitHub access is enabled, but for complete commit-attribution coverage use the bundled authenticated GitHub CLI collector.
+Upload `skill.zip` as a custom agent skill in a Skills-compatible agent, or place the `mirror-gate/` directory in the agent's supported skills directory. The GitHub connector fallback works in ChatGPT when GitHub access is enabled, but for complete commit-attribution coverage use the bundled authenticated GitHub CLI collector.
 
 ## Start a session
 
-> Blame me on last week's changes. Check `org/backend` and `org/frontend`. Quiz me for at most 10 minutes, then give me my score and weekly digest.
+> Use $mirror-gate on last week's changes. Check `org/backend` and `org/frontend`. Quiz me for at most 10 minutes, then give me my score and weekly digest.
 
 If your agent has a working tree with a GitHub remote and an authenticated `gh` CLI, `--repo` can be omitted. Otherwise, provide one or more repo scopes. The first run needs GitHub login + authorized repo access. Nothing is posted back to GitHub.
 
 ## Optional direct collection
 
 ```bash
-python scripts/collect_week.py --repo org/backend --repo org/frontend --output /tmp/blame-me-evidence.json
+python scripts/collect_week.py --repo org/backend --repo org/frontend --output /tmp/mirror-gate-evidence.json
 ```
 
 By default, date scope is the last completed calendar week Monday 00:00 to Monday 00:00 in Europe/Vienna. The command is read-only and writes JSON locally with restrictive permissions. It may contain private source patches; keep it private and delete when done.
@@ -23,7 +23,7 @@ By default, date scope is the last completed calendar week Monday 00:00 to Monda
 For a week starting on another Monday:
 
 ```bash
-python scripts/collect_week.py --repo org/backend --week-start 2026-11-09 --output /tmp/blame-me-evidence.json
+python scripts/collect_week.py --repo org/backend --week-start 2026-11-09 --output /tmp/mirror-gate-evidence.json
 ```
 
 ## Score
@@ -32,9 +32,9 @@ Question answers receive 0-4 points. Final /100 is category-normalized: intent 3
 
 ## Remember progress and catch up
 
-> Blame me on last week's changes and enable local learning memory. Remember demonstrated strengths and gaps for future study.
+> Use $mirror-gate on last week's changes and enable local learning memory. Remember demonstrated strengths and gaps for future study.
 
-Memory is optional and stays outside your repositories, by default in `${CODEX_HOME:-~/.codex}/blame-me-memory/<github-login>/learning.md`. You can choose another local location. It retains a compact profile of your stated goals and preferences, dated topic evidence, and assessment summaries. It does not store raw source patches or full answers. The agent reports whether saving succeeded; filesystem access is required for persistence across sessions.
+Memory is optional and stays outside your repositories, by default in `${CODEX_HOME:-~/.codex}/mirror-gate-memory/<github-login>/learning.md`. You can choose another local location. It retains a compact profile of your stated goals and preferences, dated topic evidence, and assessment summaries. It does not store raw source patches or full answers. The agent reports whether saving succeeded; filesystem access is required for persistence across sessions.
 
 > Help me catch up on the gaps from my last examination. I have 15 minutes.
 

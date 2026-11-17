@@ -1,4 +1,4 @@
-# Blame Me assessment rubric
+# MirrorGate assessment rubric
 
 ## Per-question quality scale (integers or halves, 0-4)
 
@@ -29,7 +29,7 @@ Always state `X/Y merged PRs quizzed`, `Z merged PRs summarized`, `N open PRs su
 
 **Optional confidence:** If the developer supplied high/medium/low with answers, show a descriptive calibration note (e.g. high-confidence mistakes). Do not change score based on confidence. Don't add extra questions merely to collect it.
 
-**Interpretive bands (descriptive only, not normative):** 90-100 strong recall, 75-89 working understanding, 50-74 revisit some changes, 0-49 substantial refresh needed. If only 1-2 questions are answerable, suppress the band as unreliable. Do not use alarming or shaming language; "Blame Me" is playful, not punitive.
+**Interpretive bands (descriptive only, not normative):** 90-100 strong recall, 75-89 working understanding, 50-74 revisit some changes, 0-49 substantial refresh needed. If only 1-2 questions are answerable, suppress the band as unreliable. Do not use alarming or shaming language; Keep feedback supportive and focused on learning.
 
 ## Evidence quality
 

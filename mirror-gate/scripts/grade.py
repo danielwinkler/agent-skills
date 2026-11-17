@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compute the deterministic normalized Blame Me comprehension score.
+"""Compute the deterministic normalized MirrorGate comprehension score.
 
 Input JSON: {"questions": [{"category": "intent", "score": 3.5}, ...],
              "planned_questions": 7}.

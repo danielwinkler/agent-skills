@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only, repo-scoped GitHub PR collector for the Blame Me agent skill.
+"""Read-only, repo-scoped GitHub PR collector for the MirrorGate agent skill.
 
 Requires the GitHub CLI (gh) authenticated to GitHub. No dependencies outside
 Python's standard library. No GitHub mutations or repository code execution.
@@ -236,7 +236,7 @@ def main() -> int:
             print(encoded, end="")
         return 0
     except (ValueError, RuntimeError, KeyError, json.JSONDecodeError) as exc:
-        print(f"Blame Me collection failed: {exc}", file=sys.stderr)
+        print(f"MirrorGate collection failed: {exc}", file=sys.stderr)
         return 1
 
 

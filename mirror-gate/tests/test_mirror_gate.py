@@ -18,7 +18,7 @@ def load(name):
 collector = load("collect_week")
 grader = load("grade")
 
-class BlameMeTests(unittest.TestCase):
+class MirrorGateTests(unittest.TestCase):
     def test_previous_monday_week_and_dst(self):
         zone = ZoneInfo("Europe/Vienna")
         start, end = collector.window(datetime(2026, 11, 16, 20, tzinfo=timezone.utc), zone)

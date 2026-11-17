@@ -1,4 +1,4 @@
-# Blame Me - week of YYYY-MM-DD to YYYY-MM-DD (end exclusive)
+# MirrorGate - week of YYYY-MM-DD to YYYY-MM-DD (end exclusive)
 
 > Evidence: N repositories; all merged PRs inspected for selected scope / partial coverage (explain). Quiz: X/Y eligible PRs sampled, Q questions answered, ~M minutes. 
 

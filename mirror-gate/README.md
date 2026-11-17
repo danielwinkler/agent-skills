@@ -4,7 +4,7 @@ A short Monday engineering recall check based on last week's merged GitHub PRs, 
 
 ## Install
 
-Upload `skill.zip` as a custom agent skill in a Skills-compatible agent, or place the `mirror-gate/` directory in the agent's supported skills directory. The GitHub connector fallback works in ChatGPT when GitHub access is enabled, but for complete commit-attribution coverage use the bundled authenticated GitHub CLI collector.
+See the [repository installation instructions](../README.md#install) to install with `npx skills` or copy the skill directory manually. For complete commit-attribution coverage, use the bundled authenticated GitHub CLI collector; an available GitHub connector provides a fallback.
 
 ## Start a session
 
